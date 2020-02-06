@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Turn Node
+  - Forest
   layers:
   - Default
   - TransparentFX
