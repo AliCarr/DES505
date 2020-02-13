@@ -62,10 +62,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Enemy\Scripts\EnemyBehaviour.cs" />
+    <Compile Include="Assets\Enemy\Scripts\EnemyFactory.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Enemy\EnemyAttributes.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Enemy\EnemyMovement.cs" />
-    <Compile Include="Assets\Scripts\Behaviours\EnemyFactory.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Node.cs" />
+    <Compile Include="Assets\Scripts\Level\Player Input\GridControls.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/DES505/DES505/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
