@@ -1043,6 +1043,30 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[2]
       value: 
       objectReference: {fileID: 1960957839}
+    - target: {fileID: 7110169006388094746, guid: 1e771d4085186ee439a5175e213c9653,
+        type: 3}
+      propertyPath: r
+      value: 
+      objectReference: {fileID: 11400000, guid: 8c5fa7c4ff1b1f442a523f580d23077e,
+        type: 2}
+    - target: {fileID: 7110169006388094746, guid: 1e771d4085186ee439a5175e213c9653,
+        type: 3}
+      propertyPath: CO2EnemyObject
+      value: 
+      objectReference: {fileID: 423492247677523783, guid: 813617ab77828704994c00693e7bda31,
+        type: 3}
+    - target: {fileID: 7110169006388094746, guid: 1e771d4085186ee439a5175e213c9653,
+        type: 3}
+      propertyPath: SF6EnemyObject
+      value: 
+      objectReference: {fileID: 423492247677523783, guid: 21cb0ef5e149fd7448ed7a78c213f509,
+        type: 3}
+    - target: {fileID: 7110169006388094746, guid: 1e771d4085186ee439a5175e213c9653,
+        type: 3}
+      propertyPath: CH4EnemyObject
+      value: 
+      objectReference: {fileID: 423492247677523783, guid: c985e22eac3be3249b7d6642472c54dc,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e771d4085186ee439a5175e213c9653, type: 3}
 --- !u!1 &1639075930
