@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyFactory : MonoBehaviour
 {
-    public const int pathMax = 3;
+    public const int pathMax = 8;
     public Transform[] waypoints;
     public Round r;
     public GameObject CO2EnemyObject;
@@ -29,15 +29,19 @@ public class EnemyFactory : MonoBehaviour
 
      
 
-        if (enemiesSpawned <= r.GetTotal() && timer >= creationRate && currentEnemyCount <= pathMax)
+        if (enemiesSpawned + 1 <= r.GetTotal() && timer >= creationRate && currentEnemyCount <= pathMax)
         {
-            Instantiate(CO2EnemyObject, transform).GetComponent<EnemyBehaviour>().SetWaypoints(waypoints);
+            Instantiate(spawnList[spawnList.Count - 1], transform).GetComponent<EnemyBehaviour>().SetWaypoints(waypoints);
             timer = 0;
             ++enemiesSpawned;
+            spawnList.RemoveAt(spawnList.Count - 1);
         }
 
         currentEnemyCount = transform.childCount;
     }
+
+
+
 
     void FillSpawnList()
     {
@@ -68,7 +72,7 @@ public class EnemyFactory : MonoBehaviour
         int randomIndex = 0;
         while(input.Count > 0)
         {
-            randomIndex = Random.Range(0, input.Count);
+            randomIndex = Random.Range(0, input.Count - 1);
             output.Add(input[randomIndex]);
             input.RemoveAt(randomIndex);
         }
