@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\Enemy\Scripts\EnemyBehaviour.cs" />
     <Compile Include="Assets\Enemy\Scripts\EnemyFactory.cs" />
+    <Compile Include="Assets\Scriptable Objects\Rounds\Round.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Enemy\EnemyAttributes.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Enemy\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Node.cs" />

@@ -6,10 +6,9 @@ public class EnemyBehaviour : MonoBehaviour
 {
     [Range(0.1f, 3.0f)]
     public float speed;
-
     private Transform[] waypoints;
     private int waypointIndex = 0;
-    // Start is called before the first frame update
+
     public void SetWaypoints(Transform[] newWayPoints)
     {
         waypoints = newWayPoints;
@@ -20,8 +19,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if(waypointIndex <= waypoints.Length - 1)
         {
-            transform.position = Vector2.MoveTowards(transform.position,
-                waypoints[waypointIndex].position, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, waypoints[waypointIndex].position, speed * Time.deltaTime);
 
             if (transform.position == waypoints[waypointIndex].position)
                 waypointIndex++;
