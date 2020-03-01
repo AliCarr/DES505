@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 423492247677523777}
   - component: {fileID: 423492247677523782}
   m_Layer: 0
-  m_Name: Enemy
-  m_TagString: Untagged
+  m_Name: CO2
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,3 +94,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.36
+  temperature: {fileID: 0}

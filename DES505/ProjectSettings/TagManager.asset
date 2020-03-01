@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Turn Node
   - Forest
+  - Solar
+  - Tree
+  - Enemy
   layers:
   - Default
   - TransparentFX

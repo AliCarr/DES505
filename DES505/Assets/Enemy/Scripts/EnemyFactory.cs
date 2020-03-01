@@ -10,7 +10,7 @@ public class EnemyFactory : MonoBehaviour
     public GameObject CO2EnemyObject;
     public GameObject SF6EnemyObject;
     public GameObject CH4EnemyObject;
-
+    public TemperatureScript giveTempScript;
     private float creationRate = 1.3f;
     private int currentEnemyCount = 0;
     private float timer = 0;
@@ -32,6 +32,7 @@ public class EnemyFactory : MonoBehaviour
         if (enemiesSpawned + 1 <= r.GetTotal() && timer >= creationRate && currentEnemyCount <= pathMax)
         {
             Instantiate(spawnList[spawnList.Count - 1], transform).GetComponent<EnemyBehaviour>().SetWaypoints(waypoints);
+            spawnList[spawnList.Count - 1].GetComponent<EnemyBehaviour>().temperature = giveTempScript;
             timer = 0;
             ++enemiesSpawned;
             spawnList.RemoveAt(spawnList.Count - 1);

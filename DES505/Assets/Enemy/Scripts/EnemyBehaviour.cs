@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
+    private const float Amount = 1.0f;
     [Range(0.1f, 3.0f)]
     public float speed;
+    public TemperatureScript temperature;
     private Transform[] waypoints;
     private int waypointIndex = 0;
+
 
     public void SetWaypoints(Transform[] newWayPoints)
     {
@@ -26,7 +29,9 @@ public class EnemyBehaviour : MonoBehaviour
         }
         else
         {
+            temperature.IncreaseTemperature(Amount);
             Destroy(this.gameObject);
+            
         }
         
     }

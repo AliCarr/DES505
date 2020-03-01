@@ -47,7 +47,7 @@ public class GridControls : MonoBehaviour
         }
     }
 
-    void ButtonPressed()
+    public void ButtonPressed()
     {
         if (mainMap.GetTile(mainMap.WorldToCell(currentMousePos)).name == "freeSpace")
             mainMap.SetTile(mainMap.WorldToCell(currentMousePos), towerTile);
