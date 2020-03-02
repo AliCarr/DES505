@@ -8,8 +8,13 @@ public class EnemyBehaviour : MonoBehaviour
     [Range(0.1f, 3.0f)]
     public float speed;
     public TemperatureScript temperature;
+    public SPScripts sciencePoints;
     private Transform[] waypoints;
     private int waypointIndex = 0;
+
+    public int health;
+    public int damage;
+    public int value;
 
 
     public void SetWaypoints(Transform[] newWayPoints)
@@ -31,8 +36,25 @@ public class EnemyBehaviour : MonoBehaviour
         {
             temperature.IncreaseTemperature(Amount);
             Destroy(this.gameObject);
-            
         }
-        
+
+        if(health <= 0)
+        {
+            temperature.DecreaseTemperature(Amount);
+            sciencePoints.IncreaseSciencePoints(20);
+            Destroy(this.gameObject);
+        }
     }
+
+
+    public void TakeDamage(int amount)
+    {
+        health -= amount;
+    }
+
+    int DoDamage()
+    {
+        return damage;
+    }
+
 }

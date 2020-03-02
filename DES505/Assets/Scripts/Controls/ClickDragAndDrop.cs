@@ -56,6 +56,7 @@ public class ClickDragAndDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHa
         if (costOfBuild <= currentSP)
         {
             newBuilding = Instantiate(gameObject, transform.position, Quaternion.identity);
+            
             newBuilding.transform.SetParent(canvas.transform);
             FindObjectOfType<SPScripts>().DecreaseSciencePoints(costOfBuild);
             
@@ -71,7 +72,7 @@ public class ClickDragAndDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     {
         if (newBuilding != null)
         {
-            newBuilding.transform.position = Input.mousePosition; //
+            newBuilding.transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0); //
         }
     }
 
@@ -84,8 +85,9 @@ public class ClickDragAndDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHa
             //newBuilding.GetComponent<ClickDragAndDrop>().enabled = false;  // Disable the Click and Drag script so that the Built building is'nt movable anymore
             Destroy(newBuilding.GetComponent<ClickDragAndDrop>()); // Remove the Click and Drag script so that the Built building is'nt movable anymore
             newBuilding.GetComponent<BuildingsFunctions>().enabled = true; // Enable the Buildings Functions so that the Building start performing what they can do
-            gridCon.ButtonPressed();
             newBuilding.SetActive(false);
+            gridCon.ButtonPressed();
+          
         }
 
         newBuilding = null;  // Setting the newBuilding to null just to make sure the same building doesnt get dragged upon next build

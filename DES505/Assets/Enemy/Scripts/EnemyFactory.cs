@@ -11,7 +11,8 @@ public class EnemyFactory : MonoBehaviour
     public GameObject SF6EnemyObject;
     public GameObject CH4EnemyObject;
     public TemperatureScript giveTempScript;
-    private float creationRate = 1.3f;
+    public SPScripts giveSciencePoints;
+    private float creationRate = 2.0f;
     private int currentEnemyCount = 0;
     private float timer = 0;
     private int enemiesSpawned = 0;
@@ -33,6 +34,7 @@ public class EnemyFactory : MonoBehaviour
         {
             Instantiate(spawnList[spawnList.Count - 1], transform).GetComponent<EnemyBehaviour>().SetWaypoints(waypoints);
             spawnList[spawnList.Count - 1].GetComponent<EnemyBehaviour>().temperature = giveTempScript;
+            spawnList[spawnList.Count - 1].GetComponent<EnemyBehaviour>().sciencePoints = giveSciencePoints;
             timer = 0;
             ++enemiesSpawned;
             spawnList.RemoveAt(spawnList.Count - 1);

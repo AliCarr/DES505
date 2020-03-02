@@ -14,6 +14,8 @@ public class GridControls : MonoBehaviour
     public GameObject towerMenuUI;
     public Tilemap mainMap;
     public TileBase towerTile;
+
+    public GameObject treeGameObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,7 +52,11 @@ public class GridControls : MonoBehaviour
     public void ButtonPressed()
     {
         if (mainMap.GetTile(mainMap.WorldToCell(currentMousePos)).name == "freeSpace")
+        {
             mainMap.SetTile(mainMap.WorldToCell(currentMousePos), towerTile);
+            Vector3 newPos = new Vector3(currentMousePos.x, currentMousePos.y, 0);
+            Instantiate(treeGameObject, newPos, Quaternion.identity);
+        }
 
         towerMenuUI.SetActive(false);
     }

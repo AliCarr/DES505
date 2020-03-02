@@ -7,6 +7,7 @@ public class Tree : MonoBehaviour
 
     private GameObject[] enemies;
     private GameObject current;
+    float timer = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +20,11 @@ public class Tree : MonoBehaviour
         //Check for objects of a certain tag. 
         if (current == null)
         {
-            enemies = GameObject.FindGameObjectsWithTag("Enemey");
+            enemies = GameObject.FindGameObjectsWithTag("Enemy");
             //Find the closest.
             for (int c = 0; c < enemies.Length; ++c)
             {
-                if(Vector3.Distance( enemies[c].transform.position, this.transform.position) < 3)
+                if(Vector3.Distance( enemies[c].transform.position, this.transform.position) < 1)
                 {
                     current = enemies[c];
                     c = enemies.Length;
@@ -32,7 +33,13 @@ public class Tree : MonoBehaviour
         }
         else
         {
+            if (timer >= 0.7f)
+            {
+                current.GetComponent<EnemyBehaviour>().TakeDamage(2);
+                timer = 0;
+            }
 
+            timer += Time.deltaTime;
         }
         //is it within a certain distance
         //if so do damage

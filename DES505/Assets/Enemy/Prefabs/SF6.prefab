@@ -95,3 +95,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.36
   temperature: {fileID: 0}
+  health: 10
+  damage: 0
+  value: 0

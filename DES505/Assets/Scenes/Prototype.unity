@@ -234,6 +234,8 @@ MonoBehaviour:
   towerMenuUI: {fileID: 917153553}
   mainMap: {fileID: 1883734742}
   towerTile: {fileID: 11400000, guid: ecb98f17b1f353641948c598de6409ef, type: 2}
+  treeGameObject: {fileID: 2857826742659695751, guid: c46cfb96d1ba35f4693b6d3201983c17,
+    type: 3}
 --- !u!114 &273378107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,6 +280,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TemperatureBar
       objectReference: {fileID: 0}
+    - target: {fileID: 2701338868223108277, guid: 443e95ec755850e4fb3e4f43e78816a5,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 2701338868316693308, guid: 443e95ec755850e4fb3e4f43e78816a5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -336,12 +343,12 @@ PrefabInstance:
     - target: {fileID: 2701338868316693308, guid: 443e95ec755850e4fb3e4f43e78816a5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -469
+      value: 59.4
       objectReference: {fileID: 0}
     - target: {fileID: 2701338868316693308, guid: 443e95ec755850e4fb3e4f43e78816a5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 169
+      value: -157.3
       objectReference: {fileID: 0}
     - target: {fileID: 2701338868316693308, guid: 443e95ec755850e4fb3e4f43e78816a5,
         type: 3}
@@ -351,27 +358,27 @@ PrefabInstance:
     - target: {fileID: 2701338868316693308, guid: 443e95ec755850e4fb3e4f43e78816a5,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 222.7
+      value: 222.70001
       objectReference: {fileID: 0}
     - target: {fileID: 2701338868316693308, guid: 443e95ec755850e4fb3e4f43e78816a5,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2701338868316693308, guid: 443e95ec755850e4fb3e4f43e78816a5,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2701338868316693308, guid: 443e95ec755850e4fb3e4f43e78816a5,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2701338868316693308, guid: 443e95ec755850e4fb3e4f43e78816a5,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2701338868316693308, guid: 443e95ec755850e4fb3e4f43e78816a5,
         type: 3}
@@ -388,11 +395,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 30.04
       objectReference: {fileID: 0}
-    - target: {fileID: 2701338868223108277, guid: 443e95ec755850e4fb3e4f43e78816a5,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 443e95ec755850e4fb3e4f43e78816a5, type: 3}
 --- !u!1 &420365572
@@ -438,7 +440,7 @@ GameObject:
   - component: {fileID: 451053722}
   - component: {fileID: 451053721}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -495,7 +497,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 273378104}
   m_PlaneDistance: 10
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -607,36 +609,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682426852}
   m_CullTransparentMesh: 0
---- !u!1 &812912639
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 812912640}
-  m_Layer: 0
-  m_Name: Tree
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &812912640
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 812912639}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.46109104, y: -2.0053425, z: 64.13413}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &832190230 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6136221880565484966, guid: 2bf9eddf39590194daf5ef7be5678425,
@@ -743,17 +715,17 @@ PrefabInstance:
     - target: {fileID: 6136221880565484966, guid: 2bf9eddf39590194daf5ef7be5678425,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 487
+      value: -141
       objectReference: {fileID: 0}
     - target: {fileID: 6136221880565484966, guid: 2bf9eddf39590194daf5ef7be5678425,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00003009
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6136221880565484966, guid: 2bf9eddf39590194daf5ef7be5678425,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 308.6
+      value: 305.59998
       objectReference: {fileID: 0}
     - target: {fileID: 6136221880565484966, guid: 2bf9eddf39590194daf5ef7be5678425,
         type: 3}
@@ -763,7 +735,7 @@ PrefabInstance:
     - target: {fileID: 6136221880565484966, guid: 2bf9eddf39590194daf5ef7be5678425,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6136221880565484966, guid: 2bf9eddf39590194daf5ef7be5678425,
         type: 3}
@@ -773,7 +745,7 @@ PrefabInstance:
     - target: {fileID: 6136221880565484966, guid: 2bf9eddf39590194daf5ef7be5678425,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6136221880565484966, guid: 2bf9eddf39590194daf5ef7be5678425,
         type: 3}
@@ -1478,6 +1450,7 @@ MonoBehaviour:
   towerMenuUI: {fileID: 0}
   mainMap: {fileID: 0}
   towerTile: {fileID: 0}
+  treeGameObject: {fileID: 0}
 --- !u!1 &1251389535
 GameObject:
   m_ObjectHideFlags: 0
@@ -1518,7 +1491,7 @@ PrefabInstance:
     - target: {fileID: 4187446906757486744, guid: 0eeccb938da630d49891b9a1ec16865a,
         type: 3}
       propertyPath: m_Name
-      value: EventSystem (1)
+      value: EventSystem
       objectReference: {fileID: 0}
     - target: {fileID: 4187446906757486725, guid: 0eeccb938da630d49891b9a1ec16865a,
         type: 3}
@@ -1602,7 +1575,7 @@ PrefabInstance:
     - target: {fileID: 7110169006388094820, guid: 1e771d4085186ee439a5175e213c9653,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 7110169006388094820, guid: 1e771d4085186ee439a5175e213c9653,
         type: 3}
@@ -1743,6 +1716,11 @@ PrefabInstance:
       propertyPath: giveTempScript
       value: 
       objectReference: {fileID: 273378107}
+    - target: {fileID: 7110169006388094746, guid: 1e771d4085186ee439a5175e213c9653,
+        type: 3}
+      propertyPath: giveSciencePoints
+      value: 
+      objectReference: {fileID: 273378108}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e771d4085186ee439a5175e213c9653, type: 3}
 --- !u!224 &1566174267 stripped
@@ -1769,7 +1747,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1639075931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1882,10 +1860,10 @@ RectTransform:
   m_Father: {fileID: 451053724}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 261.23657, y: 243}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -333.85, y: 223.8}
+  m_SizeDelta: {x: 193.83002, y: 68.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1721516909
 MonoBehaviour:
@@ -1909,11 +1887,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 49
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 49
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
