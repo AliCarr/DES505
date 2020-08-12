@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    public Text nameText;
+   // public Text nameText;
     public Text dialogueText;
-
-    public Animator animator;
+    public GameObject vignette;
+    public Animator dialogueAnimator;
 
     private Queue<string> sentences; //Queue of type string
 
@@ -20,10 +19,11 @@ public class DialogueManager : MonoBehaviour
     }
 
   public void StartDialogue (Dialogue dialogue)
-    {
-        animator.SetBool("IsOpen",true);
-       // Debug.Log("Starting conversation with " + dialogue.name);
-        nameText.text = dialogue.name;
+    {       
+        dialogueAnimator.updateMode = AnimatorUpdateMode.UnscaledTime;
+        vignette.SetActive(true);
+        Time.timeScale = 0;
+        dialogueAnimator.SetBool("IsOpen",true);
 
         sentences.Clear();
 
@@ -44,7 +44,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
-        //dialogueText.text = sentence;
+
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }
@@ -55,12 +55,13 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return null;
+            yield return new WaitForSecondsRealtime(0.03f);
         }
     }
     void EndDialogue()
     {
-        animator.SetBool("IsOpen", false);
-       // throw new NotImplementedException();
+        dialogueAnimator.SetBool("IsOpen", false);
+        vignette.SetActive(false);
+        Time.timeScale = 1;
     }
 }

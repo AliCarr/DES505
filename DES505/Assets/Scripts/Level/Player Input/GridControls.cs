@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.UI;
+﻿using UnityEngine.UI;
 using UnityEngine.Tilemaps;
 using UnityEngine;
 
 
 public class GridControls : MonoBehaviour
 {
-    private Vector3 currentMousePos;
+    public Vector3 currentMousePos;
     private Camera myCamera;
 
     public Button towerButton;
@@ -78,7 +76,7 @@ public class GridControls : MonoBehaviour
 
     void HighlightCheck(string name, Color color)
     {
-        if (mainMap.GetTile(mainMap.WorldToCell(currentMousePos)).name == name)
+        if (mainMap.GetTile(mainMap.WorldToCell(currentMousePos)).name.StartsWith(name))
             mainMap.SetColor(mainMap.WorldToCell(currentMousePos), color);
     }
 }

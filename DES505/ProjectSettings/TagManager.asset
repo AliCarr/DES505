@@ -9,6 +9,7 @@ TagManager:
   - Solar
   - Tree
   - Enemy
+  - Building
   layers:
   - Default
   - TransparentFX

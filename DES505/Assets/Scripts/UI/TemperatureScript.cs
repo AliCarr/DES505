@@ -7,29 +7,23 @@ public class TemperatureScript : MonoBehaviour
 {
     public float startingTemperature = 35f; // The temperature that is when the game begins
     public Text temperatureText;            // The text indicating the temperature
-    public Image temperatureFill;           // The image component of the temperature bar
-    public Color MaxTemperatureColor = Color.red;       // The color the temperature bar will be when on maximum temperature.
-    public Color MinTemperatureColor = Color.grey;         // The color the temperature bar will be when on minimum temperature.
+    public Image currentTemperatureBar;           // The image component of the temperature bar
+    public Sprite[] temperatureLevels;
+    public PlayScript playScript;
 
-    private float currentTemperature;       // How much temperature is currently
-    private bool IsGameOver;                // Is the game over or not
+    private float currentTemperature;       // How much temperature is currently there
+    private bool isGameOver;                // Is the game over or not
 
     // Start is called before the first frame update
     void Start()
     {
         // When the game starts, reset the Starting temperature & whether the Game is over or not
         currentTemperature = startingTemperature;
-        temperatureText.text = "" + currentTemperature;
-        IsGameOver = false;
+        temperatureText.text = currentTemperature.ToString();
+        isGameOver = false;
 
         // Update the Temperature UI in starting
         SetTemperatureUI();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void IncreaseTemperature(float amount)
@@ -38,13 +32,13 @@ public class TemperatureScript : MonoBehaviour
         currentTemperature += amount;
 
         // Update the Text
-        temperatureText.text = "" + currentTemperature;
+        temperatureText.text = currentTemperature.ToString();
 
         // Change the UI elements appropriately
         SetTemperatureUI();
 
         // if current temperature is at or above 60 and if it has not been registered, call OnGameOver
-        if(currentTemperature >= 60f && !IsGameOver)
+        if(currentTemperature >= 60f && !isGameOver)
         {
             OnGameOver();
         }
@@ -56,7 +50,7 @@ public class TemperatureScript : MonoBehaviour
         currentTemperature -= amount;
 
         // Update the Text
-        temperatureText.text = "" + currentTemperature;
+        temperatureText.text = currentTemperature.ToString();
 
         // Change the UI elements appropriately
         SetTemperatureUI();
@@ -65,14 +59,22 @@ public class TemperatureScript : MonoBehaviour
     private void SetTemperatureUI()
     {
         // Set the Image fill appropriately
-
-        // Interpolate the color of the bar between the choosen colours based on the current percentage of the starting temperature.
-        temperatureFill.color = Color.Lerp(MinTemperatureColor, MaxTemperatureColor, currentTemperature / startingTemperature);
+        int index = (int)currentTemperature % 35;
+        index /= 5;
+        if(currentTemperature < 35f)
+        {
+            index = 0;
+        }
+        currentTemperatureBar.sprite = temperatureLevels[index];
     }
 
     private void OnGameOver()
     {
         // Set the flag so that this function is only called once.
-        IsGameOver = true;
+        isGameOver = true;
+        playScript.Pause();
+        playScript.pauseMenu.transform.GetChild(0).gameObject.SetActive(false);
     }
+
+    
 }

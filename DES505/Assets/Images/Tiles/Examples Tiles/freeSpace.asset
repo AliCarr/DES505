@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: freeSpace
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 6576479310540835062, guid: 2d51fc838729f744d93b13933e8f06f5,
+  m_Sprite: {fileID: -2980967796902528606, guid: 2d51fc838729f744d93b13933e8f06f5,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 304755fa5de55644fa81f4a56a3b419c, type: 3}
+  m_Name: GeothermalAnimatedlBuildingV1
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 21300000, guid: 9cb0468be59fb9147bed1801e186d16d, type: 3}
+  - {fileID: 21300000, guid: 381885a1ccdf5c34aadd9bce04951841, type: 3}
+  - {fileID: 21300000, guid: c7504a9246c27a347ae63479bc9bf21c, type: 3}
+  - {fileID: 21300000, guid: 66c4a15cb0590d849afa3f182ca1da16, type: 3}
+  - {fileID: 21300000, guid: 920d842f6b164444b9789c5d45892a04, type: 3}
+  - {fileID: 21300000, guid: 45bd0bbf2f4979745bb65c44ff3a7192, type: 3}
+  - {fileID: 21300000, guid: d553cd4ae3347d24c87b0d5ff5c434a0, type: 3}
+  m_MinSpeed: 1
+  m_MaxSpeed: 1
+  m_AnimationStartTime: 1
+  m_TileColliderType: 0

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Building : MonoBehaviour
 {
@@ -14,6 +12,7 @@ public class Building : MonoBehaviour
     public float damageUpgraded;  // Damage the building can deal after upgrade
     public float costOfBuilding; // Science points required to build the Building
     public float costOfUpgrade;  // Science points required to upgrade the Building
+    public int index;
 
     [TextArea(3, 10)]  //Make the sentence area Bigger
     public string descriptionOfBuilding; // Description of the Building
