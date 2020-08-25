@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Prototype.unity
+- path: C:/Users/anime/OneDrive/Desktop/DES505/DES505/DES505/Assets/Scenes/PlayScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
