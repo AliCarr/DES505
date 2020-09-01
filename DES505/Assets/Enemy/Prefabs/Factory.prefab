@@ -113,3 +113,13 @@ MonoBehaviour:
     type: 3}
   giveTempScript: {fileID: 0}
   giveSciencePoints: {fileID: 0}
+  roundManager:
+    roundHUD: {fileID: 0}
+    roundInfo:
+    - {fileID: 21300000, guid: e9aacc9a5b09ea44f9b41bc0136bc7ed, type: 3}
+    - {fileID: 21300000, guid: 7f0038abbcc632244b02e166c32d3cb3, type: 3}
+    - {fileID: 21300000, guid: fcc28412067f34d4ea2aa390ab01473c, type: 3}
+    - {fileID: 21300000, guid: fdbf3d7510bdbd14d939161abe22f207, type: 3}
+    - {fileID: 21300000, guid: 7c09a7542b054e446b39d5bd7289253b, type: 3}
+    roundNumber: 1
+  winImage: {fileID: 0}

@@ -7,8 +7,7 @@ public class MovingProjectiles : MonoBehaviour
     
     void Update()
     {
-        
-        //transform.LookAt(enemyTransform, Vector3.right);
+     
         if (enemyTransform != null)
         {
             transform.Rotate(0.0f, 0.0f, Vector2.SignedAngle(transform.position, -transform.position + enemyTransform.position), Space.Self);

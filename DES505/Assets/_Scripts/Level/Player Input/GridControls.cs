@@ -13,7 +13,6 @@ public class GridControls : MonoBehaviour
     public Tilemap mainMap;
     public TileBase towerTile;
 
-    public GameObject treeGameObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,7 +52,7 @@ public class GridControls : MonoBehaviour
         {
             mainMap.SetTile(mainMap.WorldToCell(currentMousePos), towerTile);
             Vector3 newPos = new Vector3(currentMousePos.x, currentMousePos.y, 0);
-            Instantiate(treeGameObject, newPos, Quaternion.identity);
+            //Instantiate(treeGameObject, newPos, Quaternion.identity);
         }
 
         towerMenuUI.SetActive(false);

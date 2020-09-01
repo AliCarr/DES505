@@ -10,11 +10,8 @@ public class PlayScript : MonoBehaviour
     public GameObject vignette;
     public GameObject pauseMenu;
     public Animator dialogueBox;
-    //public Building tree;
 
     private bool isPaused = false;
-    // Start is called before the first frame update
-
 
     // Update is called once per frame
     void Update()
@@ -27,7 +24,6 @@ public class PlayScript : MonoBehaviour
 
     public void GoToLevel()
     {
-       // SceneManager.LoadScene("PlayScene");
        SceneManager.LoadScene("Prototype");
         Time.timeScale = 1;
 
@@ -52,7 +48,7 @@ public class PlayScript : MonoBehaviour
 
     }
 
-        public void GoToCredits()
+    public void GoToCredits()
     {
         SceneManager.LoadScene("CreditScene");
     }
@@ -72,7 +68,6 @@ public class PlayScript : MonoBehaviour
         {
             Time.timeScale = 2;
             fastForwardButton.image.sprite = fastForward;
-           // fastForwardButton
         }
         else
         {

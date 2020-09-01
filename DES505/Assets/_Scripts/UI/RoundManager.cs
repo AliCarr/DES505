@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class RoundManager : MonoBehaviour
+[System.Serializable]
+public class RoundManager
 {
-    public Image roundHUD;                    //HUD displaying round number
-    public Sprite[] roundInfo;                //arrays of all the rounds images
-    public int roundNumber = 1;               // The round number
+    [SerializeField] private Image roundHUD = null;
+    [SerializeField] private Sprite[] roundInfo = null;
+    [SerializeField] private int roundNumber = 1;               
 
     //Set round number and HUD accordingly
     public void SetRound(int roundInt)

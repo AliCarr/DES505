@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class BuildingsFunctions : MonoBehaviour, IPointerClickHandler
 {
-    public bool isUpgraded = false;  // Initialise the variable which determines whether building is upgraded or not
+    public bool isUpgraded = false;  
     public GameObject upgradeButton;
     public GameObject sellButton;
     public GameObject buildingIsUpgraded;
@@ -16,30 +16,29 @@ public class BuildingsFunctions : MonoBehaviour, IPointerClickHandler
     public GameObject[] attackProjectiles;
     public Canvas canvas;
 
-    private GameObject[] enemiesPool;   // Using object pooling to add enemies deal damage and so on
-    private GameObject enemyToGetHit; // Enemy to be dealt damage 
+    private GameObject[] enemiesPool;  
+    private GameObject enemyToGetHit;  
     private List<GameObject> enemiesToGetHit;
 
     private GameObject[] buildingPool;
 
     float timer = 0;
-
-    //Instances of variables defining attributes of each building that will be used to define functionality and upgrade 
-    private string buildingName; //String for name of the building
-    private float attackInterval; //Frequency of attack
-    private float attackIntervalUpgraded; //Frequency of attack after upgrade
+    
+    private string buildingName; 
+    private float attackInterval; 
+    private float attackIntervalUpgraded; 
     private float costOfUpgrade;
     private float costOfbuild;
-    private float range;  //Range the building can cover
-    private float rangeUpgraded;  //Range the building can cover after upgrade
-    private float damage;  // Damage the building can deal
-    private float damageUpgraded;  // Damage the building can deal after upgrade
+    private float range;  
+    private float rangeUpgraded;  
+    private float damage;  
+    private float damageUpgraded;  
     private int upgradeIndex = 0;
 
     public SPScripts sciencePoints;
 
     // Start is called before the first frame update
-    public void Start()
+    private void Start()
     {
         buildingName = GetComponent<Building>().buildingName;
         attackInterval = GetComponent<Building>().attackInterval;
@@ -50,12 +49,11 @@ public class BuildingsFunctions : MonoBehaviour, IPointerClickHandler
         rangeUpgraded = GetComponent<Building>().rangeUpgraded;
         damage = GetComponent<Building>().damage;
         damageUpgraded = GetComponent<Building>().damageUpgraded;
-        //buildingsSoundSource = GetComponent<AudioSource>();
         buildingsSoundSource.Play();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         Attack();
     }
@@ -65,8 +63,6 @@ public class BuildingsFunctions : MonoBehaviour, IPointerClickHandler
         Gizmos.color = Color.black;
         Gizmos.DrawWireSphere(transform.position, range);
     }
-        
-
 
     public void Attack()
     {
@@ -172,7 +168,7 @@ public class BuildingsFunctions : MonoBehaviour, IPointerClickHandler
     {
         if (!isUpgraded)
         {
-            float currentSP = sciencePoints.currentSciencePoints; // Find the Current Science Points
+            float currentSP = sciencePoints.currentSciencePoints; 
             if (currentSP >= costOfUpgrade)
             {
                 sciencePoints.DecreaseSciencePoints(costOfUpgrade);
