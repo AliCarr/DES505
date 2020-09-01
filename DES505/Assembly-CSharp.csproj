@@ -81,6 +81,7 @@
     <Compile Include="Assets\_Scripts\DialogueSystem\GretaNPC.cs" />
     <Compile Include="Assets\_Scripts\GameManager.cs" />
     <Compile Include="Assets\_Scripts\Level\Player Input\GridControls.cs" />
+    <Compile Include="Assets\_Scripts\Singleton.cs" />
     <Compile Include="Assets\_Scripts\UI\RoundManager.cs" />
     <Compile Include="Assets\_Scripts\UI\SPScripts.cs" />
     <Compile Include="Assets\_Scripts\UI\TemperatureScript.cs" />

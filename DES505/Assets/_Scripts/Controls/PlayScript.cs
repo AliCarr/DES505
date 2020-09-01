@@ -13,6 +13,11 @@ public class PlayScript : MonoBehaviour
 
     private bool isPaused = false;
 
+    void Awake()
+    {
+        bool initTheGame = GameManager.Instance.isInit;
+    }
+
     // Update is called once per frame
     void Update()
     {

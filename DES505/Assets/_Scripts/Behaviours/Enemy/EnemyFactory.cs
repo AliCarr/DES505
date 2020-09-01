@@ -40,7 +40,7 @@ public class EnemyFactory : MonoBehaviour
     {
         //Start each frame by incrementing the timer
         timer += Time.deltaTime;
-        Debug.Log(spawnList.Count + " ," + currentEnemyCount);
+
         if (enemiesSpawned + 1 <= r.GetTotal() && timer >= creationRate && currentEnemyCount <= pathMax)
         {
             Instantiate(spawnList[spawnList.Count - 1], transform).GetComponent<EnemyBehaviour>().SetWaypoints(waypoints);
@@ -54,7 +54,6 @@ public class EnemyFactory : MonoBehaviour
 
         if(spawnList.Count == 0 && currentEnemyCount == 0)
         {
-            Debug.Log("Working");
             currentRound++;
             enemiesSpawned = 0;
             roundManager.SetRound(currentRound);
@@ -63,7 +62,6 @@ public class EnemyFactory : MonoBehaviour
 
         if (spawnList.Count == 0  && currentRound == 4)
         {
-            Debug.Log("Working");
             winImage.gameObject.SetActive(true);
             menuButton.SetActive(true);
         }
