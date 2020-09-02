@@ -82,9 +82,15 @@
     <Compile Include="Assets\_Scripts\GameManager.cs" />
     <Compile Include="Assets\_Scripts\Level\Player Input\GridControls.cs" />
     <Compile Include="Assets\_Scripts\Singleton.cs" />
+    <Compile Include="Assets\_Scripts\StateSystem\GameRunningState.cs" />
+    <Compile Include="Assets\_Scripts\StateSystem\GameState.cs" />
+    <Compile Include="Assets\_Scripts\StateSystem\MainMenuState.cs" />
+    <Compile Include="Assets\_Scripts\StateSystem\PauseState.cs" />
+    <Compile Include="Assets\_Scripts\StateSystem\StateController.cs" />
     <Compile Include="Assets\_Scripts\UI\RoundManager.cs" />
     <Compile Include="Assets\_Scripts\UI\SPScripts.cs" />
     <Compile Include="Assets\_Scripts\UI\TemperatureScript.cs" />
+    <Compile Include="Assets\_Scripts\UIManager.cs" />
     <Compile Include="Assets\Scriptable Objects\Rounds\Round.cs" />
     <None Include="Assets\Fonts\paytone-one\OFL.txt" />
     <None Include="Assets\Fonts\raleway\SIL Open Font License.txt" />

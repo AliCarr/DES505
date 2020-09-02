@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class ClickDragAndDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    public Tilemap mainMap;          
-    public GameObject towerMenuUI;       
+    public Tilemap mainMap;              
     public TileBase towerTile;      
 
     public Sprite tileSprite;         
@@ -30,8 +29,13 @@ public class ClickDragAndDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHa
 
     private bool isPressing;  
 
+    private void Awake()
+    {
+        //mainMap = FindObjectOfType<Tilemap>();
+    }
+
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         FocusOnDeck();
     }
@@ -121,7 +125,7 @@ public class ClickDragAndDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHa
             {
                 Destroy(newBuilding);
             }
-            towerMenuUI.SetActive(false);
+            //towerMenuUI.SetActive(false);
             // gridCon.ButtonPressed();
 
         }

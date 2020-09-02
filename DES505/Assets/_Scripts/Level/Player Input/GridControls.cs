@@ -18,7 +18,7 @@ public class GridControls : MonoBehaviour
     {
         myCamera = GetComponent<Camera>();
         currentMousePos = Vector3.zero;
-        towerButton.onClick.AddListener(ButtonPressed);
+        ///towerButton.onClick.AddListener(ButtonPressed);
     }
 
     [System.Obsolete]

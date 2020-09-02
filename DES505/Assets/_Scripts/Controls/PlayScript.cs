@@ -53,15 +53,11 @@ public class PlayScript : MonoBehaviour
 
     }
 
-    public void GoToCredits()
-    {
-        SceneManager.LoadScene("CreditScene");
-    }
-
     public void GoBack()
     {
         SceneManager.LoadScene("MenuScene");
     }
+
     public void Quit()
     {
         Application.Quit();
