@@ -21,12 +21,17 @@ public class StateController
         stateStack.Peek().OnStateExit();
     }
 
+    public GameState ReturnTopState()
+    {
+        return stateStack.Peek();
+    }
+
     public void UpdateStates()
     {
         if (stateStack.Count > 0)
         {
             GameState gameState = stateStack.Peek();
-            Debug.Log(gameState.ToString());
+            //Debug.Log(gameState.ToString());
             gameState.OnStateUpdate();
         }
     }

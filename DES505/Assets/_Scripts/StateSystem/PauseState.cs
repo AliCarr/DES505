@@ -27,5 +27,12 @@ public class PauseState : GameState
         {
             stateController.PopState(this);
         }
+
+        if(UIManager.Instance.MainMenuPressed())
+        {
+            stateController.PopState(this);
+            GameState topState = stateController.ReturnTopState();
+            stateController.PopState(topState);
+        }
     }
 }

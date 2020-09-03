@@ -15,6 +15,7 @@ public class GameRunningState : GameState
     public override void OnStateEnter()
     {
         UIManager.Instance.EnableGameMenu();
+        GridControls.Instance.Init();
     }
 
     public override void OnStateExit()
@@ -24,7 +25,6 @@ public class GameRunningState : GameState
 
     public override void OnStateUpdate()
     {
-        GridControls.Instance.Init();
         dialogueBox = UIManager.Instance.dialogueBox;
         if (Input.GetKeyDown("escape") && !dialogueBox.GetBool("IsOpen"))
         {
