@@ -13,7 +13,7 @@ public class GameManager : Singleton<GameManager>
         isInit = true;
         DontDestroyOnLoad(gameObject);
 
-        UIManager.Instance.Init();
+        //UIManager.Instance.Init();
 
         //Create a new State Machine
         stateController = new StateController();

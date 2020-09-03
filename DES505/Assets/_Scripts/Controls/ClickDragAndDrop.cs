@@ -127,7 +127,6 @@ public class ClickDragAndDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHa
             }
             //towerMenuUI.SetActive(false);
             // gridCon.ButtonPressed();
-
         }
 
         newBuilding = null;  
