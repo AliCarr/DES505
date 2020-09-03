@@ -10,8 +10,8 @@ public class SPScripts : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       // currentSciencePoints = startingSciencePoints;
-       // sciencePointsText.text = startingSciencePoints.ToString();
+        currentSciencePoints = startingSciencePoints;
+        sciencePointsText.text = startingSciencePoints.ToString();
     }
 
     public void IncreaseSciencePoints(float amount)

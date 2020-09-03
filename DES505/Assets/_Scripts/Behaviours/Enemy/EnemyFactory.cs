@@ -58,6 +58,7 @@ public class EnemyFactory : MonoBehaviour
 
         if (spawnList.Count == 0  && currentRound == 4)
         {
+            currentEnemyCount = 0;
             UIManager.Instance.GetWinImage().SetActive(true);
         }
     }
