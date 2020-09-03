@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2111143930318854065}
   - component: {fileID: 2111143930318854064}
   - component: {fileID: 2111143930318854079}
-  - component: {fileID: 2111143930318854066}
   - component: {fileID: 2111143930318854067}
   - component: {fileID: 2111143930318854068}
   - component: {fileID: 2111143930318854070}
@@ -89,23 +88,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2111143930318854078}
   m_Enabled: 1
---- !u!114 &2111143930318854066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2111143930318854078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f9b1d695ebbb9c47be5af5386f95ec3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentMousePos: {x: -7.0166163, y: -6.260813, z: -10}
-  towerButton: {fileID: 0}
-  towerMenuUI: {fileID: 0}
-  mainMap: {fileID: 0}
-  towerTile: {fileID: 11400000, guid: e913be99726b6614596bd34a934484d8, type: 2}
 --- !u!114 &2111143930318854067
 MonoBehaviour:
   m_ObjectHideFlags: 0
