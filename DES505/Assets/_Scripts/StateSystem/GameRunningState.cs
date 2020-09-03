@@ -24,6 +24,7 @@ public class GameRunningState : GameState
 
     public override void OnStateUpdate()
     {
+        GridControls.Instance.Init();
         dialogueBox = UIManager.Instance.dialogueBox;
         if (Input.GetKeyDown("escape") && !dialogueBox.GetBool("IsOpen"))
         {

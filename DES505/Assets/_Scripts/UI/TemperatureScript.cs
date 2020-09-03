@@ -9,7 +9,6 @@ public class TemperatureScript : MonoBehaviour
     public Text temperatureText;            
     public Image currentTemperatureBar;           
     public Sprite[] temperatureLevels;
-    public PlayScript playScript;
 
     private float currentTemperature;       
     private bool isGameOver;                
@@ -57,8 +56,9 @@ public class TemperatureScript : MonoBehaviour
     private void OnGameOver()
     {
         isGameOver = true;
-        playScript.Pause();
-        playScript.pauseMenu.transform.GetChild(0).gameObject.SetActive(false);
+        UIManager.Instance.Pause();
+        //playScript.Pause();
+        //playScript.pauseMenu.transform.GetChild(0).gameObject.SetActive(false);
     }
 
     

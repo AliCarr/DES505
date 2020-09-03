@@ -32,6 +32,8 @@ public class ClickDragAndDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     private void Awake()
     {
         //mainMap = FindObjectOfType<Tilemap>();
+        gridCon = GridControls.Instance;
+        mainMap = gridCon.mainMap;
     }
 
     // Update is called once per frame

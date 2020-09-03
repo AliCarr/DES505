@@ -18,11 +18,10 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private Sprite fastForward;
     [SerializeField] private GameObject vignette;
     [SerializeField] public Animator dialogueBox;
+    [SerializeField] private Canvas canvas;
 
     private bool isPaused = false;
-    
-
-    public void Init()  {   }
+    public void Init()  { }
 
     public Button PlayButton()  { return playButton;  } 
     public bool ResumePressed()  { return true;  }

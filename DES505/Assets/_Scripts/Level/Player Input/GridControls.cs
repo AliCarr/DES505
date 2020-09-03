@@ -3,7 +3,7 @@ using UnityEngine.Tilemaps;
 using UnityEngine;
 
 
-public class GridControls : MonoBehaviour
+public class GridControls : Singleton<GridControls>
 {
     public Vector3 currentMousePos;
     private Camera myCamera;
@@ -14,7 +14,7 @@ public class GridControls : MonoBehaviour
     public TileBase towerTile;
 
     // Start is called before the first frame update
-    void Start()
+    public void Init()
     {
         myCamera = GetComponent<Camera>();
         currentMousePos = Vector3.zero;
