@@ -13,7 +13,6 @@ public class EnemyFactory : MonoBehaviour
     [SerializeField] private GameObject SF6EnemyObject = null;
     [SerializeField] private GameObject CH4EnemyObject = null;
 
-
     private float creationRate = 2.0f;
     private int currentEnemyCount = 0;
     private float timer = 0;

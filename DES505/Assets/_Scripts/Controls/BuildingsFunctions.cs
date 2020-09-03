@@ -15,6 +15,7 @@ public class BuildingsFunctions : MonoBehaviour, IPointerClickHandler
     public AudioClip buildingAttack;
     public GameObject[] attackProjectiles;
     public Canvas canvas;
+    public SPScripts sciencePoints;
 
     private GameObject[] enemiesPool;  
     private GameObject enemyToGetHit;  
@@ -35,7 +36,6 @@ public class BuildingsFunctions : MonoBehaviour, IPointerClickHandler
     private float damageUpgraded;  
     private int upgradeIndex = 0;
 
-    public SPScripts sciencePoints;
 
     // Start is called before the first frame update
     private void Start()

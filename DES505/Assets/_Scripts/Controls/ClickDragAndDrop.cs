@@ -116,8 +116,8 @@ public class ClickDragAndDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHa
 
             if (mainMap.GetTile(mainMap.WorldToCell(gridCon.currentMousePos)).name.StartsWith("freeSpace"))
             {
-                mainMap.SetTile(mainMap.WorldToCell(gridCon.currentMousePos), towerTile);  
-                newBuilding.transform.position = mainMap.WorldToCell(gridCon.currentMousePos);
+                mainMap.SetTile(mainMap.WorldToCell(gridCon.currentMousePos), towerTile);
+                newBuilding.transform.position = mainMap.GetCellCenterWorld(mainMap.WorldToCell(gridCon.currentMousePos));
                 newBuilding.GetComponent<ClickDragAndDrop>().enabled = false;  
                 newBuilding.GetComponent<BuildingsFunctions>().enabled = true; 
                 FindObjectOfType<SPScripts>().DecreaseSciencePoints(costOfBuild); 
@@ -125,11 +125,10 @@ public class ClickDragAndDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHa
             }
             else
             {
-                //Destroy(newBuilding);
+                Destroy(newBuilding);
             }
             //towerMenuUI.SetActive(false);
-            // gridCon.ButtonPressed();
-
+            //gridCon.ButtonPressed();
         }
 
         newBuilding = null;  

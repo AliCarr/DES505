@@ -18,8 +18,6 @@ public class GameManager : Singleton<GameManager>
         //Create a new State Machine
         stateController = new StateController();
         stateController.PushState(new MainMenuState(stateController));
-
-        
     }
 
     // Update is called once per frame

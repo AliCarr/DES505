@@ -25,13 +25,12 @@ public class GameRunningState : GameState
 
     public override void OnStateUpdate()
     {
+        Debug.Log(stateController.stateStack.Count);
         dialogueBox = UIManager.Instance.dialogueBox;
         if (Input.GetKeyDown("escape") && !dialogueBox.GetBool("IsOpen"))
         {
             stateController.PushState(new PauseState(stateController));
         }
-
-
     }
 
 

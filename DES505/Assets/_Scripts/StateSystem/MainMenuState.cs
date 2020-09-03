@@ -19,12 +19,17 @@ public class MainMenuState : GameState
 
     public override void OnStateExit()
     {
-        //UIManager.Instance.DisableMainMenu();
+        UIManager.Instance.DisableMainMenu();
     }
 
     public override void OnStateUpdate()
     {
-        UIManager.Instance.PlayButton().onClick.AddListener(OnClick);  
+        Debug.Log(stateController.stateStack.Count);
+        
+        if(UIManager.Instance.GetIsPlayPressed())
+        {
+            OnClick();
+        }
     }
 
     private void OnClick()
@@ -33,5 +38,6 @@ public class MainMenuState : GameState
         SceneManager.LoadScene("Prototype");
         Time.timeScale = 1;
         UIManager.Instance.DisableMainMenu();
+        UIManager.Instance.SetIsPlayPressed(false);
     }
 }

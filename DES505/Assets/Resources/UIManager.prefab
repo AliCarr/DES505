@@ -1220,7 +1220,7 @@ MonoBehaviour:
   - {fileID: 1465149445948420921, guid: e4fee74cbafd89c4f82d0bc9ff533a6d, type: 3}
   - {fileID: 3827979442407899270, guid: 9542c5f37b162474288c135520ea92e2, type: 3}
   canvas: {fileID: 6067789687420968742}
-  sciencePoints: {fileID: 0}
+  sciencePoints: {fileID: 4967599208856016453}
 --- !u!82 &6067789687419644818
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2325,7 +2325,7 @@ MonoBehaviour:
   - {fileID: 6080965948907291862, guid: b46ebe5916731f54383e0c4f0fe3fdc0, type: 3}
   - {fileID: 7791900760573030730, guid: 9b407c5634c9707408d9b3bf23dabadd, type: 3}
   canvas: {fileID: 6067789687420968742}
-  sciencePoints: {fileID: 0}
+  sciencePoints: {fileID: 4967599208856016453}
 --- !u!82 &6067789686500601471
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2843,7 +2843,7 @@ MonoBehaviour:
   - {fileID: 6760301376952719347, guid: f77c960569106034d9b0c2f6a5d82474, type: 3}
   - {fileID: 490644329259344583, guid: 46fca99c1764fc147b165d1074385013, type: 3}
   canvas: {fileID: 6067789687420968742}
-  sciencePoints: {fileID: 0}
+  sciencePoints: {fileID: 4967599208856016453}
 --- !u!82 &6067789686481413498
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3281,7 +3281,7 @@ MonoBehaviour:
   - {fileID: 5777676756841175401, guid: 975217746260cab45a258ef86cbc8dba, type: 3}
   - {fileID: 5777676756841175401, guid: 975217746260cab45a258ef86cbc8dba, type: 3}
   canvas: {fileID: 6067789687420968742}
-  sciencePoints: {fileID: 0}
+  sciencePoints: {fileID: 4967599208856016453}
 --- !u!82 &6067789687241426499
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3816,7 +3816,7 @@ MonoBehaviour:
   buildingAttack: {fileID: 8300000, guid: 7e455e78568a33e429a794de265abdb8, type: 3}
   attackProjectiles: []
   canvas: {fileID: 6067789687420968742}
-  sciencePoints: {fileID: 0}
+  sciencePoints: {fileID: 4967599208856016453}
 --- !u!82 &6067789686477462332
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4332,7 +4332,7 @@ MonoBehaviour:
   - {fileID: 369700892833953392, guid: e164b985a65b93f4c86a4ea7dc53617a, type: 3}
   - {fileID: 369700892833953392, guid: e164b985a65b93f4c86a4ea7dc53617a, type: 3}
   canvas: {fileID: 6067789687420968742}
-  sciencePoints: {fileID: 0}
+  sciencePoints: {fileID: 4967599208856016453}
 --- !u!82 &6067789685557020336
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5661,16 +5661,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6067789687420968741}
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1514266049009646881}
+        m_MethodName: SetIsResumed
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Quit()
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 1
       - m_Target: {fileID: 6067789687420968736}
         m_MethodName: Play
@@ -6832,16 +6832,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: GoBack
-        m_Mode: 1
+      - m_Target: {fileID: 1514266049009646881}
+        m_MethodName: SetIsMainMenuPressed
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Quit()
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 1
       - m_Target: {fileID: 6067789687420968736}
         m_MethodName: Play
@@ -7090,7 +7090,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sciencePointsText: {fileID: 6067789685483082960}
   startingSciencePoints: 160
-  currentSciencePoints: 0
+  currentSciencePoints: 160
 --- !u!1 &6067789686200553995
 GameObject:
   m_ObjectHideFlags: 0
@@ -8089,16 +8089,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6067789687420968741}
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1514266049009646881}
+        m_MethodName: SetIsMainMenuPressed
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Quit()
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 1
       - m_Target: {fileID: 6067789687420968736}
         m_MethodName: Play
@@ -8540,6 +8540,17 @@ MonoBehaviour:
           m_StringArgument: GoToLevel
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 1514266049009646881}
+        m_MethodName: SetIsPlayPressed
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &6067789687092520018

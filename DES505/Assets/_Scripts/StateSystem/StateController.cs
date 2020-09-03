@@ -5,7 +5,7 @@ using UnityEngine;
 //State Controller or State Machine doesnt need to inherit from Monobehaviour 
 public class StateController
 {
-    private Stack<GameState> stateStack = new Stack<GameState>();
+    public Stack<GameState> stateStack = new Stack<GameState>();
 
     public void PushState(GameState gameState)
     {
@@ -16,9 +16,9 @@ public class StateController
     
     public void PopState(GameState gameState)
     {
-        Debug.Assert(stateStack.Count == 0 && stateStack.Peek() == gameState, "Trying to pop non active state");
-        stateStack.Pop();
+        Debug.Assert(stateStack.Count != 0 || stateStack.Peek() != gameState, "Trying to pop non active state");
         stateStack.Peek().OnStateExit();
+        stateStack.Pop();
     }
 
     public GameState ReturnTopState()

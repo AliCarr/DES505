@@ -6,61 +6,58 @@ using UnityEngine.UI;
 
 public class UIManager : Singleton<UIManager>
 {
-    [SerializeField] private Button playButton;
+    [SerializeField] private Button playButton = null;
 
     [Header("Menus")]
-    [SerializeField] private GameObject mainMenu;
-    [SerializeField] private GameObject gameMenuUI;
-    [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject mainMenu = null;
+    [SerializeField] private GameObject gameMenuUI = null;
+    [SerializeField] private GameObject pauseMenu = null;
 
-    [SerializeField] private Button fastForwardButton;
-    [SerializeField] private Sprite play;
-    [SerializeField] private Sprite fastForward;
-    [SerializeField] private GameObject vignette;
-    [SerializeField] private TemperatureScript temperatureScript;
-    [SerializeField] private SPScripts spScript;
+    [SerializeField] private Button fastForwardButton = null;
+    [SerializeField] private Sprite play = null;
+    [SerializeField] private Sprite fastForward = null;
+    [SerializeField] private GameObject vignette = null;
+    [SerializeField] private TemperatureScript temperatureScript = null;
+    [SerializeField] private SPScripts spScript = null;
     [SerializeField] private RoundManager roundManager = null;
     [SerializeField] private GameObject winImage = null;
 
-    [SerializeField] public Animator dialogueBox;
+    [SerializeField] public Animator dialogueBox = null;
 
 
-    private bool isPaused = false;
-    public void Init()  { }
+    //private bool isPaused = false;
+    private bool isMainMenuPressed = false;
+    private bool isResumed = false;
+    private bool isPlayPressed = false;
 
-    public Button PlayButton()  { return playButton;  } 
+    public void Init() { }
+
+    public bool GetIsPlayPressed() { return isPlayPressed; }
+    public void SetIsPlayPressed(bool value) { isPlayPressed = value; }
+    public bool GetIsMainMenuPressed() { return isMainMenuPressed; }
+    public void SetIsMainMenuPressed(bool value) { isMainMenuPressed = value; }
+    public bool GetIsResumed() { return isResumed; }
+    public void SetIsResumed(bool value) { isResumed = value; }
+
     public TemperatureScript TemperaturScript()  { return temperatureScript;  }  
     public SPScripts SPScript()  { return spScript;  }   
     public RoundManager GetRoundManager()  { return roundManager;  } 
     public GameObject GetWinImage()  { return winImage;  } 
 
 
-    public bool ResumePressed()  { return true;  }
-    public bool MainMenuPressed()  { return true;  }
-
     public void Pause()
     {
-        if (!isPaused)
-        {
-            Time.timeScale = 0;
-            vignette.SetActive(true);
-            pauseMenu.SetActive(true);
-            pauseMenu.transform.GetChild(0).gameObject.SetActive(true);
-            isPaused = true;
-        }
-        else
-        {
-            Time.timeScale = 1;
-            vignette.SetActive(false);
-            pauseMenu.SetActive(false);
-            isPaused = false;
-        }
-
-    }
-
-    public void GoBack()
+        Time.timeScale = 0;
+        vignette.SetActive(true);
+        pauseMenu.SetActive(true);
+        pauseMenu.transform.GetChild(0).gameObject.SetActive(true);
+    }  
+    
+    public void UnPause()
     {
-        SceneManager.LoadScene("MenuScene");
+        Time.timeScale = 1;
+        vignette.SetActive(false);
+        pauseMenu.SetActive(false);
     }
 
     public void Quit()

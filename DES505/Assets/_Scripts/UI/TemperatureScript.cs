@@ -6,22 +6,20 @@ using UnityEngine.UI;
 public class TemperatureScript : MonoBehaviour
 {
     [SerializeField] private float startingTemperature = 35f;
-    [SerializeField] private Text temperatureText;
-    [SerializeField] private Image currentTemperatureBar;
-    [SerializeField] private Sprite[] temperatureLevels;
+    [SerializeField] private Text temperatureText = null;
+    [SerializeField] private Image currentTemperatureBar = null;
+    [SerializeField] private Sprite[] temperatureLevels = null;
 
-    private float currentTemperature;       
+    private float currentTemperature = 35f;       
     private bool isGameOver;                
 
     // Start is called before the first frame update
-    void Start()
-    {
-        currentTemperature = startingTemperature;
-        temperatureText.text = currentTemperature.ToString();
-        isGameOver = false;
 
-        SetTemperatureUI();
-    }
+    //currentTemperature = startingTemperature;
+    //temperatureText.text = currentTemperature.ToString();
+    //isGameOver = false;
+
+    //SetTemperatureUI();
 
     public void IncreaseTemperature(float amount)
     {
