@@ -120,18 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &109999089 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 858691090992820556, guid: 50e126175aa64f84ea4ad2b37586416a,
-    type: 3}
-  m_PrefabInstance: {fileID: 858691091034342077}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &420365572
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,12 +222,6 @@ Transform:
   m_Father: {fileID: 1061527711}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &870885084 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 858691090802123873, guid: 50e126175aa64f84ea4ad2b37586416a,
-    type: 3}
-  m_PrefabInstance: {fileID: 858691091034342077}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &916175476
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,17 +690,17 @@ PrefabInstance:
         type: 3}
       propertyPath: roundManager.roundHUD
       value: 
-      objectReference: {fileID: 109999089}
+      objectReference: {fileID: 0}
     - target: {fileID: 7110169006388094746, guid: 1e771d4085186ee439a5175e213c9653,
         type: 3}
       propertyPath: winImage
       value: 
-      objectReference: {fileID: 1768310769}
+      objectReference: {fileID: 0}
     - target: {fileID: 7110169006388094746, guid: 1e771d4085186ee439a5175e213c9653,
         type: 3}
       propertyPath: menuButton
       value: 
-      objectReference: {fileID: 870885084}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e771d4085186ee439a5175e213c9653, type: 3}
 --- !u!1 &1464774914 stripped
@@ -930,18 +912,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1768310769 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 858691089299883340, guid: 50e126175aa64f84ea4ad2b37586416a,
-    type: 3}
-  m_PrefabInstance: {fileID: 858691091034342077}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1839735485 &1883734742 stripped
 Tilemap:
   m_CorrespondingSourceObject: {fileID: 6292142383617014978, guid: f9f84ca03920cc3428e7bb310d89ffe3,
@@ -1008,7 +978,7 @@ Transform:
   m_Father: {fileID: 1061527711}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &2146768031
+--- !u!1001 &2030816289
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1084,6 +1054,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6067789687420968741, guid: 50e126175aa64f84ea4ad2b37586416a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 858691091187599909, guid: 50e126175aa64f84ea4ad2b37586416a,
         type: 3}
       propertyPath: m_Name
@@ -1209,18 +1184,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 509351512, guid: 50e126175aa64f84ea4ad2b37586416a, type: 3}
-      propertyPath: towerButton
-      value: 
-      objectReference: {fileID: 862593693}
-    - target: {fileID: 509351512, guid: 50e126175aa64f84ea4ad2b37586416a, type: 3}
-      propertyPath: towerMenuUI
-      value: 
-      objectReference: {fileID: 917153553}
-    - target: {fileID: 509351512, guid: 50e126175aa64f84ea4ad2b37586416a, type: 3}
-      propertyPath: mainMap
-      value: 
-      objectReference: {fileID: 1883734742}
     - target: {fileID: 858691089223404821, guid: 50e126175aa64f84ea4ad2b37586416a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1336,6 +1299,18 @@ PrefabInstance:
       propertyPath: sciencePoints
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 509351512, guid: 50e126175aa64f84ea4ad2b37586416a, type: 3}
+      propertyPath: towerButton
+      value: 
+      objectReference: {fileID: 862593693}
+    - target: {fileID: 509351512, guid: 50e126175aa64f84ea4ad2b37586416a, type: 3}
+      propertyPath: towerMenuUI
+      value: 
+      objectReference: {fileID: 917153553}
+    - target: {fileID: 509351512, guid: 50e126175aa64f84ea4ad2b37586416a, type: 3}
+      propertyPath: mainMap
+      value: 
+      objectReference: {fileID: 1883734742}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50e126175aa64f84ea4ad2b37586416a, type: 3}
 --- !u!1001 &3834514529166837004

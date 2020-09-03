@@ -78,7 +78,7 @@ public class ClickDragAndDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     public void OnBeginDrag(PointerEventData eventData)
     {
         float costOfBuild = GetComponent<Building>().costOfBuilding; 
-        float currentSP = FindObjectOfType<SPScripts>().currentSciencePoints; 
+        float currentSP = FindObjectOfType<SPScripts>().GetSciencePoints(); 
 
         if (costOfBuild <= currentSP)
         {

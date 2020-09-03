@@ -17,13 +17,24 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private Sprite play;
     [SerializeField] private Sprite fastForward;
     [SerializeField] private GameObject vignette;
+    [SerializeField] private TemperatureScript temperatureScript;
+    [SerializeField] private SPScripts spScript;
+    [SerializeField] private RoundManager roundManager = null;
+    [SerializeField] private GameObject winImage = null;
+
     [SerializeField] public Animator dialogueBox;
-    [SerializeField] private Canvas canvas;
+
 
     private bool isPaused = false;
     public void Init()  { }
 
     public Button PlayButton()  { return playButton;  } 
+    public TemperatureScript TemperaturScript()  { return temperatureScript;  }  
+    public SPScripts SPScript()  { return spScript;  }   
+    public RoundManager GetRoundManager()  { return roundManager;  } 
+    public GameObject GetWinImage()  { return winImage;  } 
+
+
     public bool ResumePressed()  { return true;  }
     public bool MainMenuPressed()  { return true;  }
 

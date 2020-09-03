@@ -12,11 +12,7 @@ public class EnemyFactory : MonoBehaviour
     [SerializeField] private GameObject CO2EnemyObject = null;
     [SerializeField] private GameObject SF6EnemyObject = null;
     [SerializeField] private GameObject CH4EnemyObject = null;
-    [SerializeField] private TemperatureScript giveTempScript = null;
-    [SerializeField] private SPScripts giveSciencePoints = null;
-    [SerializeField] private RoundManager roundManager = null;
-    [SerializeField] private Image winImage = null;
-    [SerializeField] private GameObject menuButton = null;
+
 
     private float creationRate = 2.0f;
     private int currentEnemyCount = 0;
@@ -44,8 +40,8 @@ public class EnemyFactory : MonoBehaviour
         if (enemiesSpawned + 1 <= r.GetTotal() && timer >= creationRate && currentEnemyCount <= pathMax)
         {
             Instantiate(spawnList[spawnList.Count - 1], transform).GetComponent<EnemyBehaviour>().SetWaypoints(waypoints);
-            spawnList[spawnList.Count - 1].GetComponent<EnemyBehaviour>().temperature = giveTempScript;
-            spawnList[spawnList.Count - 1].GetComponent<EnemyBehaviour>().sciencePoints = giveSciencePoints;
+            spawnList[spawnList.Count - 1].GetComponent<EnemyBehaviour>().temperature = UIManager.Instance.TemperaturScript();
+            spawnList[spawnList.Count - 1].GetComponent<EnemyBehaviour>().sciencePoints = UIManager.Instance.SPScript();
             timer = 0;
             ++enemiesSpawned;
             spawnList.RemoveAt(spawnList.Count - 1);
@@ -56,14 +52,13 @@ public class EnemyFactory : MonoBehaviour
         {
             currentRound++;
             enemiesSpawned = 0;
-            roundManager.SetRound(currentRound);
+            UIManager.Instance.GetRoundManager().SetRound(currentRound);
             NewRound();
         }
 
         if (spawnList.Count == 0  && currentRound == 4)
         {
-            winImage.gameObject.SetActive(true);
-            menuButton.SetActive(true);
+            UIManager.Instance.GetWinImage().SetActive(true);
         }
     }
 

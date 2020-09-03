@@ -168,7 +168,7 @@ public class BuildingsFunctions : MonoBehaviour, IPointerClickHandler
     {
         if (!isUpgraded)
         {
-            float currentSP = sciencePoints.currentSciencePoints; 
+            float currentSP = sciencePoints.GetSciencePoints(); 
             if (currentSP >= costOfUpgrade)
             {
                 sciencePoints.DecreaseSciencePoints(costOfUpgrade);

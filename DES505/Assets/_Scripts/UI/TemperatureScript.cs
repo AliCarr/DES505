@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class TemperatureScript : MonoBehaviour
 {
-    public float startingTemperature = 35f; 
-    public Text temperatureText;            
-    public Image currentTemperatureBar;           
-    public Sprite[] temperatureLevels;
+    [SerializeField] private float startingTemperature = 35f;
+    [SerializeField] private Text temperatureText;
+    [SerializeField] private Image currentTemperatureBar;
+    [SerializeField] private Sprite[] temperatureLevels;
 
     private float currentTemperature;       
     private bool isGameOver;                
