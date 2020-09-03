@@ -1160,7 +1160,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee9022529365dd4681f98cd0cffdbdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMap: {fileID: 5373835208610660090, guid: c229a29e071796243938c5c1e40309d3, type: 3}
   towerTile: {fileID: 11400000, guid: f96fe83ee29d31a468be6381f62e49b5, type: 2}
   tileSprite: {fileID: 21300000, guid: b5bbbf3ea8fbfbc47aea4e77cd3b24b5, type: 3}
   highlightSprite: {fileID: 21300000, guid: 6f0b3e971db6fc84bb465e4e87ce4d01, type: 3}
@@ -2266,7 +2265,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee9022529365dd4681f98cd0cffdbdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMap: {fileID: 5373835208610660090, guid: c229a29e071796243938c5c1e40309d3, type: 3}
   towerTile: {fileID: 11400000, guid: e913be99726b6614596bd34a934484d8, type: 2}
   tileSprite: {fileID: 21300000, guid: 361fe1c6f7f67a24ab2edb8b2bab5f2b, type: 3}
   highlightSprite: {fileID: 21300000, guid: 06f8fd9451b37464bae5e4078ac1ef06, type: 3}
@@ -2783,7 +2781,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee9022529365dd4681f98cd0cffdbdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMap: {fileID: 5373835208610660090, guid: c229a29e071796243938c5c1e40309d3, type: 3}
   towerTile: {fileID: 11400000, guid: 74f86ea5588ab674a9f23470d3c40e3f, type: 2}
   tileSprite: {fileID: 21300000, guid: b1cb904be4850e448ac05035cb28998a, type: 3}
   highlightSprite: {fileID: 21300000, guid: 0a7bd2011d420db42955068bd637eed9, type: 3}
@@ -3221,7 +3218,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee9022529365dd4681f98cd0cffdbdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMap: {fileID: 5373835208610660090, guid: c229a29e071796243938c5c1e40309d3, type: 3}
   towerTile: {fileID: 11400000, guid: 5735d898e790311469990e14158c7b84, type: 2}
   tileSprite: {fileID: 21300000, guid: 4a71dc9126256e340ba42a88b7adc5cb, type: 3}
   highlightSprite: {fileID: 21300000, guid: b257a8594fa382c4386c4075a83b1673, type: 3}
@@ -3759,7 +3755,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee9022529365dd4681f98cd0cffdbdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMap: {fileID: 5373835208610660090, guid: c229a29e071796243938c5c1e40309d3, type: 3}
   towerTile: {fileID: 11400000, guid: b21270c3a714f214e872220c1ce0d599, type: 2}
   tileSprite: {fileID: 21300000, guid: 3f76f84bb3e6ed64c817126b9a72119c, type: 3}
   highlightSprite: {fileID: 21300000, guid: 17fc203a7254102408435d69261f42a7, type: 3}
@@ -4272,7 +4267,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee9022529365dd4681f98cd0cffdbdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMap: {fileID: 5373835208610660090, guid: c229a29e071796243938c5c1e40309d3, type: 3}
   towerTile: {fileID: 11400000, guid: e8fb5de52eedae942bcc1f7c28480691, type: 2}
   tileSprite: {fileID: 21300000, guid: 03553620517bc19469371bba9d3125fd, type: 3}
   highlightSprite: {fileID: 21300000, guid: bb6c9f02e0b03874290dc913bdab1706, type: 3}
@@ -8282,7 +8276,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6067789686834326630}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -88}
+  m_LocalPosition: {x: 0, y: 0, z: -143.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7238767330420679670}
@@ -9361,7 +9355,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6067789687420968741}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -2.14}
   m_LocalScale: {x: 0.009574074, y: 0.009574074, z: 0.009574074}
   m_Children:
   - {fileID: 6708249722121132764}

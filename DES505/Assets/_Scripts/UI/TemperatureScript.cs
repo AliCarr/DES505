@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TemperatureScript : MonoBehaviour
 {
-    [SerializeField] private float startingTemperature = 35f;
+    //[SerializeField] private float startingTemperature = 35f;
     [SerializeField] private Text temperatureText = null;
     [SerializeField] private Image currentTemperatureBar = null;
     [SerializeField] private Sprite[] temperatureLevels = null;

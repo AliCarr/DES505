@@ -6,7 +6,6 @@ public class MainMenuState : GameState
 {
     StateController stateController;
 
-
     public MainMenuState(StateController stateController)
     {
         this.stateController = stateController;
@@ -23,9 +22,7 @@ public class MainMenuState : GameState
     }
 
     public override void OnStateUpdate()
-    {
-        Debug.Log(stateController.stateStack.Count);
-        
+    {     
         if(UIManager.Instance.GetIsPlayPressed())
         {
             OnClick();

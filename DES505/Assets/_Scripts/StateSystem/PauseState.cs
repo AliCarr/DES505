@@ -19,6 +19,7 @@ public class PauseState : GameState
     {
         UIManager.Instance.UnPause();
         UIManager.Instance.SetIsResumed(false);
+        UIManager.Instance.SetIsMainMenuPressed(false);
     }
 
     public override void OnStateUpdate()
@@ -34,8 +35,8 @@ public class PauseState : GameState
             GameState topState = stateController.ReturnTopState();
             stateController.PopState(topState);
             GameState topState2 = stateController.ReturnTopState();
-            Debug.Log(topState2.ToString());
             SceneManager.LoadScene("MenuScene");
+            topState2.OnStateEnter();
         }
     }
 

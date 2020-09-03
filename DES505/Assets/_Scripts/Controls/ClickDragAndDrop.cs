@@ -4,8 +4,7 @@ using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
 public class ClickDragAndDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
-{
-    public Tilemap mainMap;              
+{            
     public TileBase towerTile;      
 
     public Sprite tileSprite;         
@@ -25,15 +24,13 @@ public class ClickDragAndDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     public GameObject cantBuildtext; 
     public static bool otherBuildingSelected = true;
 
-    public GridControls gridCon;
+    //[SerializeField] private GridControls gridCon;
 
     private bool isPressing;  
 
     private void Awake()
     {
-        //mainMap = FindObjectOfType<Tilemap>();
-        gridCon = GridControls.Instance;
-        mainMap = gridCon.mainMap;
+        //gridCon = GridControls.Instance;
     }
 
     // Update is called once per frame
@@ -99,7 +96,7 @@ public class ClickDragAndDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     {
         if (newBuilding != null)
         {
-            newBuilding.transform.position = new Vector3(gridCon.currentMousePos.x, gridCon.currentMousePos.y, 0);
+            newBuilding.transform.position = new Vector3(GridControls.Instance.currentMousePos.x,GridControls.Instance.currentMousePos.y, 0);
         }
     }
 
@@ -109,15 +106,15 @@ public class ClickDragAndDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHa
 
         if (newBuilding != null)
         {
-
+            Tilemap mainMap = GridControls.Instance.mainMap;
             float costOfBuild = GetComponent<Building>().costOfBuilding; 
 
             newBuilding.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
 
-            if (mainMap.GetTile(mainMap.WorldToCell(gridCon.currentMousePos)).name.StartsWith("freeSpace"))
+            if (mainMap.GetTile(mainMap.WorldToCell(GridControls.Instance.currentMousePos)).name.StartsWith("freeSpace"))
             {
-                mainMap.SetTile(mainMap.WorldToCell(gridCon.currentMousePos), towerTile);
-                newBuilding.transform.position = mainMap.GetCellCenterWorld(mainMap.WorldToCell(gridCon.currentMousePos));
+                mainMap.SetTile(mainMap.WorldToCell(GridControls.Instance.currentMousePos), towerTile);
+                newBuilding.transform.position = mainMap.GetCellCenterWorld(mainMap.WorldToCell(GridControls.Instance.currentMousePos));
                 newBuilding.GetComponent<ClickDragAndDrop>().enabled = false;  
                 newBuilding.GetComponent<BuildingsFunctions>().enabled = true; 
                 FindObjectOfType<SPScripts>().DecreaseSciencePoints(costOfBuild); 

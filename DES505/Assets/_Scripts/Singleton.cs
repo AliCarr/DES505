@@ -5,7 +5,7 @@ public abstract class Singleton<Type>  : MonoBehaviour where Type : MonoBehaviou
 {
     private static Type _instance;
 
-    private bool _persistent = true;
+    private bool _persistent = false;
 
   
     public static Type Instance

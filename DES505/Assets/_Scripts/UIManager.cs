@@ -1,13 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class UIManager : Singleton<UIManager>
 {
-    [SerializeField] private Button playButton = null;
-
     [Header("Menus")]
     [SerializeField] private GameObject mainMenu = null;
     [SerializeField] private GameObject gameMenuUI = null;
@@ -24,13 +19,12 @@ public class UIManager : Singleton<UIManager>
 
     [SerializeField] public Animator dialogueBox = null;
 
-
     //private bool isPaused = false;
     private bool isMainMenuPressed = false;
     private bool isResumed = false;
     private bool isPlayPressed = false;
 
-    public void Init() { }
+    public void Init() { DontDestroyOnLoad(gameObject); }
 
     public bool GetIsPlayPressed() { return isPlayPressed; }
     public void SetIsPlayPressed(bool value) { isPlayPressed = value; }

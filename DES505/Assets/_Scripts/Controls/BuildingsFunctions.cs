@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class BuildingsFunctions : MonoBehaviour, IPointerClickHandler
 {
@@ -220,8 +219,7 @@ public class BuildingsFunctions : MonoBehaviour, IPointerClickHandler
     public void Sell()
     {
         sciencePoints.IncreaseSciencePoints((costOfUpgrade + costOfbuild)/2);
-        GetComponent<ClickDragAndDrop>().enabled = true;
-        GetComponent<ClickDragAndDrop>().mainMap.SetTile(GetComponent<ClickDragAndDrop>().mainMap.WorldToCell(gameObject.transform.position), null);
+        GridControls.Instance.mainMap.SetTile(GridControls.Instance.mainMap.WorldToCell(gameObject.transform.position), null);
         Destroy(gameObject);
     }
 
