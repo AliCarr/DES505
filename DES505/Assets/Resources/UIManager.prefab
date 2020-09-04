@@ -1170,7 +1170,6 @@ MonoBehaviour:
   buildingName: {fileID: 80259780844476720}
   canvas: {fileID: 6067789687420968742}
   cantBuildtext: {fileID: 80259779514762870}
-  gridCon: {fileID: 0}
 --- !u!114 &80259779427169399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2275,7 +2274,6 @@ MonoBehaviour:
   buildingName: {fileID: 80259780844476720}
   canvas: {fileID: 6067789687420968742}
   cantBuildtext: {fileID: 80259779514762870}
-  gridCon: {fileID: 0}
 --- !u!114 &80259779818207255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2791,7 +2789,6 @@ MonoBehaviour:
   buildingName: {fileID: 80259780844476720}
   canvas: {fileID: 6067789687420968742}
   cantBuildtext: {fileID: 80259779514762870}
-  gridCon: {fileID: 0}
 --- !u!114 &80259780148728950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3228,7 +3225,6 @@ MonoBehaviour:
   buildingName: {fileID: 80259780844476720}
   canvas: {fileID: 6067789687420968742}
   cantBuildtext: {fileID: 80259779514762870}
-  gridCon: {fileID: 0}
 --- !u!114 &80259780519750739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3765,7 +3761,6 @@ MonoBehaviour:
   buildingName: {fileID: 80259780844476720}
   canvas: {fileID: 6067789687420968742}
   cantBuildtext: {fileID: 80259779514762870}
-  gridCon: {fileID: 0}
 --- !u!114 &80259780608651725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4277,7 +4272,6 @@ MonoBehaviour:
   buildingName: {fileID: 80259780844476720}
   canvas: {fileID: 6067789687420968742}
   cantBuildtext: {fileID: 80259779514762870}
-  gridCon: {fileID: 0}
 --- !u!114 &80259780980583726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7083,7 +7077,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sciencePointsText: {fileID: 6067789685483082960}
-  startingSciencePoints: 160
   currentSciencePoints: 160
 --- !u!1 &6067789686200553995
 GameObject:
@@ -7940,16 +7933,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6067789687420968741}
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1514266049009646881}
+        m_MethodName: SetIsRestarted
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Quit()
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 1
       - m_Target: {fileID: 6067789687420968736}
         m_MethodName: Play
@@ -9536,7 +9529,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e4fa22b4cbde8845ac81fafbf19ec32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playButton: {fileID: 6067789686983037794}
   mainMenu: {fileID: 6690026451466323045}
   gameMenuUI: {fileID: 6955341589251926165}
   pauseMenu: {fileID: 6067789685735923623}
@@ -9807,7 +9799,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b20b5428c96fc4daa2b687811fbde5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingTemperature: 35
   temperatureText: {fileID: 8162787454766708946}
   currentTemperatureBar: {fileID: 8162787454860820314}
   temperatureLevels:

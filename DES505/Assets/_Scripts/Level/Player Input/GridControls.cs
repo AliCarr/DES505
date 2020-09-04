@@ -9,11 +9,6 @@ public class GridControls : Singleton<GridControls>
 
     public Tilemap mainMap;
 
-    private void Awake()
-    {
-        Debug.Log("Awake");
-    }
-
     public void Init()
     {
         currentMousePos = Vector3.zero;
@@ -24,7 +19,7 @@ public class GridControls : Singleton<GridControls>
     {
          currentMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        HighlightGrid();
+         HighlightGrid();
     }
 
     [System.Obsolete]

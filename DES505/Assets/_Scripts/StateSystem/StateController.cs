@@ -30,7 +30,6 @@ public class StateController
         if (stateStack.Count > 0)
         {
             GameState gameState = stateStack.Peek();
-            //Debug.Log(gameState.ToString());
             gameState.OnStateUpdate();
         }
     }

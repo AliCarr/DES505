@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameRunningState : GameState
 {
     StateController stateController;
     private Animator dialogueBox;
-
+    private bool initGridControl = true;
     public GameRunningState(StateController stateController)
     {
         this.stateController = stateController;
@@ -14,7 +15,7 @@ public class GameRunningState : GameState
 
     public override void OnStateEnter()
     {
-        GridControls.Instance.Init();
+        initGridControl = true;
         UIManager.Instance.EnableGameMenu();
     }
 
@@ -25,11 +26,25 @@ public class GameRunningState : GameState
 
     public override void OnStateUpdate()
     {
-        //GridControls.Instance.Init();
+        if (initGridControl)
+        {
+            GridControls.Instance.Init();
+            initGridControl = false;
+        }
+        
         dialogueBox = UIManager.Instance.dialogueBox;
         if (Input.GetKeyDown("escape") && !dialogueBox.GetBool("IsOpen"))
         {
             stateController.PushState(new PauseState(stateController));
+        }
+
+        if (UIManager.Instance.GetIsMainMenuPressed())
+        {
+            UIManager.Instance.SetIsMainMenuPressed(false);
+            stateController.PopState(this);
+            GameState topState = stateController.ReturnTopState();
+            SceneManager.LoadScene("MenuScene");
+            topState.OnStateEnter();
         }
     }
 

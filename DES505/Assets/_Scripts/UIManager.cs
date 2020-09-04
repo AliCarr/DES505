@@ -23,6 +23,7 @@ public class UIManager : Singleton<UIManager>
     private bool isMainMenuPressed = false;
     private bool isResumed = false;
     private bool isPlayPressed = false;
+    private bool isRestarted = false;
 
     public void Init() { DontDestroyOnLoad(gameObject); }
 
@@ -31,7 +32,9 @@ public class UIManager : Singleton<UIManager>
     public bool GetIsMainMenuPressed() { return isMainMenuPressed; }
     public void SetIsMainMenuPressed(bool value) { isMainMenuPressed = value; }
     public bool GetIsResumed() { return isResumed; }
-    public void SetIsResumed(bool value) { isResumed = value; }
+    public void SetIsResumed(bool value) { isResumed = value; }    
+    public bool GetIsRestarted() { return isRestarted; }
+    public void SetIsRestarted(bool value) { isRestarted = value; }
 
     public TemperatureScript TemperaturScript()  { return temperatureScript;  }  
     public SPScripts SPScript()  { return spScript;  }   
@@ -91,5 +94,18 @@ public class UIManager : Singleton<UIManager>
     public void EnableGameMenu()
     {
         gameMenuUI.SetActive(true);
+    }
+
+    public void ClearAllBuildings()
+    {
+        GameObject[] buildings = GameObject.FindGameObjectsWithTag("Building");
+
+        foreach (GameObject building in buildings)
+        {
+            if (building.name.EndsWith("Clone"))
+            {
+                Destroy(building);
+            }
+        }
     }
 }

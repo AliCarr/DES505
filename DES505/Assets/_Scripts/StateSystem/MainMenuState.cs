@@ -33,7 +33,6 @@ public class MainMenuState : GameState
     {
         stateController.PushState(new GameRunningState(stateController));
         SceneManager.LoadScene("Prototype");
-        Time.timeScale = 1;
         UIManager.Instance.DisableMainMenu();
         UIManager.Instance.SetIsPlayPressed(false);
     }
