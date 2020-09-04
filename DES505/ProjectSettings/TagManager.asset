@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Turn Node
+  - Forest
+  - Solar
+  - Tree
+  - Enemy
+  - Building
   layers:
   - Default
   - TransparentFX

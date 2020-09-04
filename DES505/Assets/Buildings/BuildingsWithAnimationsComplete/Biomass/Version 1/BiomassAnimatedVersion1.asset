@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 304755fa5de55644fa81f4a56a3b419c, type: 3}
+  m_Name: BiomassAnimatedVersion1
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 21300000, guid: e0aa7379dc6e1c94faddb3a0e49e422f, type: 3}
+  - {fileID: 21300000, guid: 891e7cc9d95d8314e8db7916a2eade7d, type: 3}
+  - {fileID: 21300000, guid: 74e428b6580c4544bb4138377f0b6582, type: 3}
+  - {fileID: 21300000, guid: e86ce847b5117c24da5cde71ed8e6c7c, type: 3}
+  - {fileID: 21300000, guid: e9ecd5b136ec08a4bbfde8711da25a95, type: 3}
+  m_MinSpeed: 1
+  m_MaxSpeed: 1
+  m_AnimationStartTime: 1
+  m_TileColliderType: 0
