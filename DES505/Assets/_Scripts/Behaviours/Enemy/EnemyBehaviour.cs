@@ -23,8 +23,8 @@ public class EnemyBehaviour : MonoBehaviour
     private bool isHealthNotZero = true;
     void Start()
     {
-        temperature = FindObjectOfType<TemperatureScript>();
-        sciencePoints = FindObjectOfType<SPScripts>();
+        temperature = UIManager.Instance.TemperaturScript();
+        sciencePoints = UIManager.Instance.SPScript();
         initialSpeed = speed;
         enemyExpressions = GetComponent<Animator>();
     }

@@ -33,6 +33,7 @@ public class PauseState : GameState
             stateController.PopState(this);
             GameState topState = stateController.ReturnTopState();
             UIManager.Instance.SetIsMainMenuPressed(false);
+            UIManager.Instance.ClearAllBuildings();
             stateController.PopState(topState);
             GameState topState2 = stateController.ReturnTopState();
             SceneManager.LoadScene("MenuScene");
@@ -48,6 +49,8 @@ public class PauseState : GameState
             SceneManager.LoadScene("Prototype");
             topState.OnStateEnter();
         }
+
+       
     }
 
 }

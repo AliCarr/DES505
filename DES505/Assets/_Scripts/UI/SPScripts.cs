@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class SPScripts : MonoBehaviour
+[System.Serializable]
+public class SPScripts 
 {
     [SerializeField] private Text sciencePointsText = null;
-    //[SerializeField] private float startingSciencePoints = 160f;
     [SerializeField] private float currentSciencePoints = 160f; 
 
     public void IncreaseSciencePoints(float amount)

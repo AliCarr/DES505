@@ -24,14 +24,7 @@ public class ClickDragAndDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     public GameObject cantBuildtext; 
     public static bool otherBuildingSelected = true;
 
-    //[SerializeField] private GridControls gridCon;
-
-    private bool isPressing;  
-
-    private void Awake()
-    {
-        //gridCon = GridControls.Instance;
-    }
+    private bool isPressing; 
 
     // Update is called once per frame
     private void Update()
@@ -75,7 +68,7 @@ public class ClickDragAndDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     public void OnBeginDrag(PointerEventData eventData)
     {
         float costOfBuild = GetComponent<Building>().costOfBuilding; 
-        float currentSP = FindObjectOfType<SPScripts>().GetSciencePoints(); 
+        float currentSP = UIManager.Instance.SPScript().GetSciencePoints(); 
 
         if (costOfBuild <= currentSP)
         {
@@ -116,8 +109,8 @@ public class ClickDragAndDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHa
                 mainMap.SetTile(mainMap.WorldToCell(GridControls.Instance.currentMousePos), towerTile);
                 newBuilding.transform.position = mainMap.GetCellCenterWorld(mainMap.WorldToCell(GridControls.Instance.currentMousePos));
                 newBuilding.GetComponent<ClickDragAndDrop>().enabled = false;  
-                newBuilding.GetComponent<BuildingsFunctions>().enabled = true; 
-                FindObjectOfType<SPScripts>().DecreaseSciencePoints(costOfBuild); 
+                newBuilding.GetComponent<BuildingsFunctions>().enabled = true;
+                UIManager.Instance.SPScript().DecreaseSciencePoints(costOfBuild); 
 
             }
             else

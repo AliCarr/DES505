@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class TemperatureScript : MonoBehaviour
+[System.Serializable]
+public class TemperatureScript 
 {
-    //[SerializeField] private float startingTemperature = 35f;
     [SerializeField] private Text temperatureText = null;
     [SerializeField] private Image currentTemperatureBar = null;
     [SerializeField] private Sprite[] temperatureLevels = null;
@@ -13,13 +11,13 @@ public class TemperatureScript : MonoBehaviour
     private float currentTemperature = 35f;       
     private bool isGameOver;                
 
-    // Start is called before the first frame update
-
-    //currentTemperature = startingTemperature;
-    //temperatureText.text = currentTemperature.ToString();
-    //isGameOver = false;
-
-    //SetTemperatureUI();
+    public void ResetTemperature()
+    {
+        currentTemperature = 35f;
+        temperatureText.text = currentTemperature.ToString();
+        SetTemperatureUI();
+        isGameOver = false;
+    }
 
     public void IncreaseTemperature(float amount)
     {
@@ -51,12 +49,13 @@ public class TemperatureScript : MonoBehaviour
         currentTemperatureBar.sprite = temperatureLevels[index];
     }
 
+
+    public bool GetGameOver() { return isGameOver; }
+
     private void OnGameOver()
     {
         isGameOver = true;
-        UIManager.Instance.Pause();
-        //playScript.Pause();
-        //playScript.pauseMenu.transform.GetChild(0).gameObject.SetActive(false);
+
     }
 
     

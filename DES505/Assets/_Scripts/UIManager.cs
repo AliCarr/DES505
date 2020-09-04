@@ -16,10 +16,10 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private SPScripts spScript = null;
     [SerializeField] private RoundManager roundManager = null;
     [SerializeField] private GameObject winImage = null;
+    [SerializeField] private GameObject gameOverImage = null;
 
     [SerializeField] public Animator dialogueBox = null;
 
-    //private bool isPaused = false;
     private bool isMainMenuPressed = false;
     private bool isResumed = false;
     private bool isPlayPressed = false;
@@ -40,6 +40,7 @@ public class UIManager : Singleton<UIManager>
     public SPScripts SPScript()  { return spScript;  }   
     public RoundManager GetRoundManager()  { return roundManager;  } 
     public GameObject GetWinImage()  { return winImage;  } 
+    public GameObject GetGameOverImage()  { return gameOverImage;  } 
 
 
     public void Pause()
@@ -102,7 +103,7 @@ public class UIManager : Singleton<UIManager>
 
         foreach (GameObject building in buildings)
         {
-            if (building.name.EndsWith("Clone"))
+            if (building.name.EndsWith("Clone)"))
             {
                 Destroy(building);
             }

@@ -14,7 +14,8 @@ public class BuildingsFunctions : MonoBehaviour, IPointerClickHandler
     public AudioClip buildingAttack;
     public GameObject[] attackProjectiles;
     public Canvas canvas;
-    public SPScripts sciencePoints;
+
+    private SPScripts sciencePoints = null;
 
     private GameObject[] enemiesPool;  
     private GameObject enemyToGetHit;  
@@ -49,6 +50,7 @@ public class BuildingsFunctions : MonoBehaviour, IPointerClickHandler
         damage = GetComponent<Building>().damage;
         damageUpgraded = GetComponent<Building>().damageUpgraded;
         buildingsSoundSource.Play();
+        sciencePoints = UIManager.Instance.SPScript();
     }
 
     // Update is called once per frame

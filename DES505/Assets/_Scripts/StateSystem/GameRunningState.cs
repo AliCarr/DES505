@@ -46,6 +46,13 @@ public class GameRunningState : GameState
             SceneManager.LoadScene("MenuScene");
             topState.OnStateEnter();
         }
+
+        if(UIManager.Instance.TemperaturScript().GetGameOver())
+        {
+            UIManager.Instance.GetGameOverImage().SetActive(true);
+            UIManager.Instance.GetRoundManager().SetRound(0);
+            stateController.PushState(new PauseState(stateController));
+        }
     }
 
 

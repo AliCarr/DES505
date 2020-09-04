@@ -27,6 +27,12 @@ public class MainMenuState : GameState
         {
             OnClick();
         }
+
+        if (UIManager.Instance.TemperaturScript().GetGameOver())
+        {
+            UIManager.Instance.TemperaturScript().ResetTemperature();
+            UIManager.Instance.GetGameOverImage().SetActive(false);
+        }
     }
 
     private void OnClick()
@@ -35,5 +41,7 @@ public class MainMenuState : GameState
         SceneManager.LoadScene("Prototype");
         UIManager.Instance.DisableMainMenu();
         UIManager.Instance.SetIsPlayPressed(false);
+
+
     }
 }
