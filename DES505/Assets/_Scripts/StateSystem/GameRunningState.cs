@@ -16,7 +16,9 @@ public class GameRunningState : GameState
     public override void OnStateEnter()
     {
         initGridControl = true;
+        Time.timeScale = 1;
         UIManager.Instance.EnableGameMenu();
+        UIManager.Instance.GetWinImage().SetActive(false);
     }
 
     public override void OnStateExit()
@@ -34,17 +36,12 @@ public class GameRunningState : GameState
         
         dialogueBox = UIManager.Instance.dialogueBox;
         if (Input.GetKeyDown("escape") && !dialogueBox.GetBool("IsOpen"))
-        {
             stateController.PushState(new PauseState(stateController));
-        }
 
-        if (UIManager.Instance.GetIsMainMenuPressed())
+        if (UIManager.Instance.GetWinImage().activeSelf)
         {
-            UIManager.Instance.SetIsMainMenuPressed(false);
-            stateController.PopState(this);
-            GameState topState = stateController.ReturnTopState();
-            SceneManager.LoadScene("MenuScene");
-            topState.OnStateEnter();
+            UIManager.Instance.GetRoundManager().SetRound(0);
+            stateController.PushState(new PauseState(stateController));
         }
 
         if(UIManager.Instance.TemperaturScript().GetGameOver())

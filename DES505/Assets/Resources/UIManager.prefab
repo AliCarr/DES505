@@ -1218,9 +1218,6 @@ MonoBehaviour:
   - {fileID: 1465149445948420921, guid: e4fee74cbafd89c4f82d0bc9ff533a6d, type: 3}
   - {fileID: 3827979442407899270, guid: 9542c5f37b162474288c135520ea92e2, type: 3}
   canvas: {fileID: 6067789687420968742}
-  sciencePoints:
-    sciencePointsText: {fileID: 0}
-    currentSciencePoints: 160
 --- !u!82 &6067789687419644818
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1608,7 +1605,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1010, y: 440.4}
+  m_AnchoredPosition: {x: -1009.88, y: 390.7}
   m_SizeDelta: {x: 100, y: 53.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &80259779543304578
@@ -1640,12 +1637,12 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 19d9eb920e4f25242905cd7f9936ec41, type: 3}
-    m_FontSize: 22
+    m_Font: {fileID: 12800000, guid: a5fd4ea3e476fc946a8e6956a8a31813, type: 3}
+    m_FontSize: 49
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 4
+    m_MaxSize: 49
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -2323,9 +2320,6 @@ MonoBehaviour:
   - {fileID: 6080965948907291862, guid: b46ebe5916731f54383e0c4f0fe3fdc0, type: 3}
   - {fileID: 7791900760573030730, guid: 9b407c5634c9707408d9b3bf23dabadd, type: 3}
   canvas: {fileID: 6067789687420968742}
-  sciencePoints:
-    sciencePointsText: {fileID: 0}
-    currentSciencePoints: 160
 --- !u!82 &6067789686500601471
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2841,9 +2835,6 @@ MonoBehaviour:
   - {fileID: 6760301376952719347, guid: f77c960569106034d9b0c2f6a5d82474, type: 3}
   - {fileID: 490644329259344583, guid: 46fca99c1764fc147b165d1074385013, type: 3}
   canvas: {fileID: 6067789687420968742}
-  sciencePoints:
-    sciencePointsText: {fileID: 0}
-    currentSciencePoints: 160
 --- !u!82 &6067789686481413498
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3279,9 +3270,6 @@ MonoBehaviour:
   - {fileID: 5777676756841175401, guid: 975217746260cab45a258ef86cbc8dba, type: 3}
   - {fileID: 5777676756841175401, guid: 975217746260cab45a258ef86cbc8dba, type: 3}
   canvas: {fileID: 6067789687420968742}
-  sciencePoints:
-    sciencePointsText: {fileID: 0}
-    currentSciencePoints: 160
 --- !u!82 &6067789687241426499
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3814,9 +3802,6 @@ MonoBehaviour:
   buildingAttack: {fileID: 8300000, guid: 7e455e78568a33e429a794de265abdb8, type: 3}
   attackProjectiles: []
   canvas: {fileID: 6067789687420968742}
-  sciencePoints:
-    sciencePointsText: {fileID: 0}
-    currentSciencePoints: 160
 --- !u!82 &6067789686477462332
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4330,9 +4315,6 @@ MonoBehaviour:
   - {fileID: 369700892833953392, guid: e164b985a65b93f4c86a4ea7dc53617a, type: 3}
   - {fileID: 369700892833953392, guid: e164b985a65b93f4c86a4ea7dc53617a, type: 3}
   canvas: {fileID: 6067789687420968742}
-  sciencePoints:
-    sciencePointsText: {fileID: 0}
-    currentSciencePoints: 160
 --- !u!82 &6067789685557020336
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5477,7 +5459,7 @@ RectTransform:
   m_Children:
   - {fileID: 6067789686767317344}
   m_Father: {fileID: 7238767330420679670}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6294,7 +6276,7 @@ RectTransform:
   - {fileID: 6067789686080172797}
   - {fileID: 6067789687308900088}
   m_Father: {fileID: 7238767330420679670}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9774,8 +9756,8 @@ RectTransform:
   - {fileID: 6067789686834326625}
   - {fileID: 6067789685444497864}
   - {fileID: 6067789685550678128}
-  - {fileID: 6067789685517029453}
   - {fileID: 6067789685735923622}
+  - {fileID: 6067789685517029453}
   - {fileID: 1755289404795758968}
   m_Father: {fileID: 6067789687420968737}
   m_RootOrder: 1

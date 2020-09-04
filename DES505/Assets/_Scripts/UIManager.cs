@@ -100,6 +100,7 @@ public class UIManager : Singleton<UIManager>
     public void ClearAllBuildings()
     {
         GameObject[] buildings = GameObject.FindGameObjectsWithTag("Building");
+        GameObject[] attacks = GameObject.FindGameObjectsWithTag("Attack");
 
         foreach (GameObject building in buildings)
         {
@@ -107,6 +108,11 @@ public class UIManager : Singleton<UIManager>
             {
                 Destroy(building);
             }
+        } 
+        
+        foreach (GameObject attack in attacks)
+        {
+             Destroy(attack);
         }
     }
 }
